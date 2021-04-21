@@ -11,7 +11,7 @@ export default createGlobalStyle`
         font-size:62.5%;
     }
     body {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'gilroylight', Arial, sans-serif;
         font-size: 1.6em;
     }
     button {
