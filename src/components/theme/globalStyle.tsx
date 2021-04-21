@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { font, size } from './index'
 
 export default createGlobalStyle`
     * {
@@ -12,7 +13,7 @@ export default createGlobalStyle`
     }
     body {
         font-family: 'gilroylight', Arial, sans-serif;
-        font-size: 1.6em;
+        font-size: 1.6rem;
     }
     button {
         cursor: pointer;

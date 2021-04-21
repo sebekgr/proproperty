@@ -1,14 +1,22 @@
 export { default as GlobalStyle } from './globalStyle'
 
-export type Size = 'xs' | 's' | 'm' | 'l' | 'xl'
+export type Size = 'xs' | 's' | 'm' | 'l'
+export type Headline = 'h1' | 'h2' | 'h3' | 'h4'
 type Colors = 'primaryDark' | 'primaryLight' | 'secondary' | 'grey' | 'white'
 
+
 export const size: Record<Size, string> = {
-	xs: '1.4rem',
-	s: '1.6rem',
-	m: '2.2rem',
-	l: '2.8rem',
-	xl: '3.4rem',
+	xs: '1.2rem',
+	s: '1.4rem',
+	m: '1.6rem',
+	l: '1.8rem',
+}
+
+export const headlineSize: Record<Headline, string> = {
+	h1: '4rem',
+	h2: '2.4rem',
+	h3: '2rem',
+	h4: '1.8rem'
 }
 
 export const margin: Record<Size, string> = size
@@ -27,4 +35,17 @@ export const fontSize: Record<Size, string> = size
 export const breakpoint: Record<string, string> = {
 	s: 'only screen and (max-width: 65rem)',
 	m: 'only screen and (max-width: 70rem)',
+}
+type Font = {
+	fontFamily: {
+		default: string
+		bold: string
+	}
+}
+
+export const font: Font = {
+	fontFamily: {
+		default: "'gilroylight', Arial, sans-serif;",
+		bold: "'gilroyextrabold', Arial, sans-serif;"
+	}
 }
