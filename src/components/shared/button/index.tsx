@@ -9,15 +9,11 @@ const baseStyle = css`
 	font-size: ${size.xs};
 `
 
-const StyledButton = styled.button`
+const Button = styled.button`
 	${baseStyle}
 	border: 1px solid ${colors.grey};
 	border-radius: 3px;
 	padding: ${size.xs} ${size.xs};
 `
-
-const Button: FC = () => {
-	return <StyledButton>test super tinny test</StyledButton>
-}
 
 export default Button

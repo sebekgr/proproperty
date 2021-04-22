@@ -1,7 +1,7 @@
 export { default as GlobalStyle } from './globalStyle'
 
 export type Size = 'xs' | 's' | 'm' | 'l'
-export type Headline = 'h1' | 'h2' | 'h3' | 'h4'
+export type HeadlineType = 'h1' | 'h2' | 'h3' | 'h4'
 type Colors = 'primaryDark' | 'primaryLight' | 'secondary' | 'grey' | 'white'
 
 
@@ -12,7 +12,7 @@ export const size: Record<Size, string> = {
 	l: '1.8rem',
 }
 
-export const headlineSize: Record<Headline, string> = {
+export const headlineSize: Record<HeadlineType, string> = {
 	h1: '4rem',
 	h2: '2.4rem',
 	h3: '2rem',
