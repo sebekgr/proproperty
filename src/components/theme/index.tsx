@@ -3,7 +3,7 @@ export { default as GlobalStyle } from './globalStyle'
 export type Spacer = Size | 'xl'
 export type Size = 'xs' | 's' | 'm' | 'l'
 export type HeadlineType = 'h1' | 'h2' | 'h3' | 'h4'
-type Colors = 'primaryDark' | 'primaryLight' | 'secondary' | 'grey' | 'white'
+type Colors = 'primaryDark' | 'primaryLight' | 'secondary' | 'buttonSecondary' | 'grey' | 'white'
 
 export const size: Record<Size, string> = {
 	xs: '1.2rem',
@@ -33,6 +33,7 @@ export const colors: Record<Colors, string> = {
 	primaryDark: '#AAAAAA',
 	primaryLight: '#E0EBED',
 	secondary: '#171B20',
+	buttonSecondary: '#9AC1D0',
 	grey: '#A1A1A1',
 	white: '#fff',
 }
