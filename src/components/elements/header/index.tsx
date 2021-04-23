@@ -8,8 +8,8 @@ import { spacer } from '../../theme'
 
 const StyledHeader = styled(MaxWidthSection)`
 	margin-top: ${spacer.m};
+	margin-bottom: ${spacer.m};
 	grid-template-columns: .5fr .7fr .5fr;
-	border: 1px solid red;
 `
 
 
