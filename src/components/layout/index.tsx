@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { size, breakpoint, Spacer } from 'components/theme'
+import { size, breakpoint } from 'components/theme'
 
 export type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import App from '../App'
 import Page404 from '../pages/404'
 import HomePage from '../pages/home'

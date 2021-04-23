@@ -1,9 +1,7 @@
 import { FC } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import styled, { css } from 'styled-components'
-import { Row } from '../../layout'
-import { spacer, size, colors } from '../../theme'
-import Paragraph from '../../shared/paragraph'
+import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
+import { size, colors } from '../../theme'
 
 
 const links = [
@@ -29,31 +27,28 @@ const links = [
     }
 ]
 
-const StyledItem = styled.li`
-    align-self: center;
-    text-align: center;
-    display: flex;
-`
 
 const StyledLink = styled(NavLink)`
     font-weight: bold;
+    font-size: ${size.xs};
     color: ${colors.secondary};
-    text-decoration: none;
-    padding: ${size.xs};
-    width: 100%;
-    height: 100%;
 `
 
+const Styledlist = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+`
 const NavLinks: FC = () => {
     const items = links.map(({link, text}) => {
         return (
-            <StyledItem key={link}><StyledLink to={link}>{text}</StyledLink></StyledItem>
+            <li key={link}><StyledLink to={link}>{text}</StyledLink></li>
         )
     })
     return (
-        <Row as="ul" gapDefault={spacer.m} columns={links.length}>
+        <Styledlist>
             {items}
-        </Row >
+        </Styledlist >
     )
 }
 
