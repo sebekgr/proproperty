@@ -1,5 +1,6 @@
 export { default as GlobalStyle } from './globalStyle'
 
+export type Spacer = Size | 'xl'
 export type Size = 'xs' | 's' | 'm' | 'l'
 export type HeadlineType = 'h1' | 'h2' | 'h3' | 'h4'
 type Colors = 'primaryDark' | 'primaryLight' | 'secondary' | 'grey' | 'white'
@@ -9,6 +10,13 @@ export const size: Record<Size, string> = {
 	s: '1.4rem',
 	m: '1.6rem',
 	l: '1.8rem',
+}
+export const spacer: Record<Spacer, string> = {
+	xs: '1rem',
+	s: '2rem',
+	m: '3rem',
+	l: '4rem',
+	xl: '5rem'
 }
 
 export const headlineSize: Record<HeadlineType, string> = {

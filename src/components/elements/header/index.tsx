@@ -4,8 +4,8 @@ import { MaxWidthSection } from '../../layout'
 import NavBar from '../navbar'
 
 const StyledHeader = styled(MaxWidthSection)`
-	border: 2px solid red;
 	width: 100%;
+	grid-template-columns: none;
 `
 
 

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { size, breakpoint } from 'components/theme'
+import { size, breakpoint, Spacer } from 'components/theme'
 
-type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
+export type GridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 
 type Props = {
 	gapDefault?: string
@@ -24,7 +24,8 @@ export type RowProps = {
 	ms?: GridSize
 	me?: GridSize
 
-	columns?: GridSize
+	columns?: number
+	gapDefault?: string
 }
 
 // large 12 cols
@@ -109,11 +110,12 @@ export const FullWidthSection = styled.section<Props>`
 
 export const Row = styled.div<RowProps>`
 	// default
-	${({ columns }) =>
+	${({ columns, gapDefault = "0"}) =>
 		columns &&
 		css`
 			display: grid;
 			grid-template-columns: repeat(${columns}, 1fr);
+			gap: ${gapDefault};
 		`}
 	grid-column-start: ${(props) => (props.ds ? props.ds : 1)};
 	grid-column-end: span ${(props) => (props.de ? props.de : 12)};
