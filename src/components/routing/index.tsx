@@ -1,21 +1,17 @@
 import { FC } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import App from '../App'
+import Page404 from '../pages/404'
+import HomePage from '../pages/home'
 
-const Home = () => <div>home</div>
-const Users = () => <div>Users</div>
 
 const Routing: FC = () => {
 	return (
 		<Router>
 			<App />
 			<Switch>
-				<Route path='/users'>
-					<Users />
-				</Route>
-				<Route path='/'>
-					<Home />
-				</Route>
+				<Route exact path='/' component={HomePage} />			
+				<Route exact component={Page404} />
 			</Switch>
 		</Router>
 	)

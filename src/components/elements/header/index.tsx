@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import { MaxWidthSection } from '../../layout'
+import NavBar from '../navbar'
 
 const StyledHeader = styled(MaxWidthSection)`
 	border: 2px solid red;
@@ -11,7 +12,7 @@ const StyledHeader = styled(MaxWidthSection)`
 const Header: FC = () => {
 	return (
 		<StyledHeader as="header">
-			header
+			<NavBar />
 		</StyledHeader>
 	)
 }

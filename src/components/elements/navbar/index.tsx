@@ -1,7 +1,12 @@
 import { FC } from 'react'
+import NavLinks from './NavLinks'
 
-const Navbar: FC = () => {
-	return <nav>navbar</nav>
+const NavBar: FC = () => {
+	return (
+		<nav>
+			<NavLinks />
+		</nav>
+	)
 }
 
-export default Navbar
+export default NavBar
