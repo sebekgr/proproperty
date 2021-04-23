@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { font, size } from './index'
 
 export default createGlobalStyle`
     * {

@@ -1,12 +1,16 @@
 import { FC } from 'react'
 import { GlobalStyle } from './theme'
+import { MaxWidthSection, Grid } from './layout'
+import Header from './elements/header'
 
 const App: FC = () => {
 	return (
-		<div>
+		<Grid>
 			<GlobalStyle />
-			<h1>test</h1>
-		</div>
+			<MaxWidthSection>
+				<Header />
+			</MaxWidthSection>
+		</Grid>
 	)
 }
 

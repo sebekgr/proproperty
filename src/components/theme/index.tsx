@@ -4,7 +4,6 @@ export type Size = 'xs' | 's' | 'm' | 'l'
 export type HeadlineType = 'h1' | 'h2' | 'h3' | 'h4'
 type Colors = 'primaryDark' | 'primaryLight' | 'secondary' | 'grey' | 'white'
 
-
 export const size: Record<Size, string> = {
 	xs: '1.2rem',
 	s: '1.4rem',
@@ -16,7 +15,7 @@ export const headlineSize: Record<HeadlineType, string> = {
 	h1: '4rem',
 	h2: '2.4rem',
 	h3: '2rem',
-	h4: '1.8rem'
+	h4: '1.8rem',
 }
 
 export const margin: Record<Size, string> = size
@@ -46,6 +45,6 @@ type Font = {
 export const font: Font = {
 	fontFamily: {
 		default: "'gilroylight', Arial, sans-serif;",
-		bold: "'gilroyextrabold', Arial, sans-serif;"
-	}
+		bold: "'gilroyextrabold', Arial, sans-serif;",
+	},
 }

@@ -83,8 +83,8 @@ export const MaxWidthSection = styled.section<Props>`
 
 export const FullWidthSection = styled.section<Props>`
 	// default
-	grid-column: 1 / span 14;
 	display: grid;
+	grid-column: 1 / span 14;
 	grid-template-columns: 1fr repeat(12, minmax(auto, 4fr)) 1fr;
 	grid-template-rows: max-content;
 	gap: ${(props) =>
