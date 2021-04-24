@@ -99,11 +99,11 @@ const SearchPanel: FC = () => {
                     <CalendarWrapper>
                         <CalendarWrapper>
                             <CalendarOutlined />
-                            <DayPickerInput />
+                            <DayPickerInput placeholder="Set date"/>
                         </CalendarWrapper>
                         <CalendarWrapper>
                             <CalendarOutlined />
-                            <DayPickerInput />
+                            <DayPickerInput placeholder="Set date"/>
                         </CalendarWrapper>
                     </CalendarWrapper>
                 </Section>

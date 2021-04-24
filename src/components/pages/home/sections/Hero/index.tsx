@@ -21,7 +21,7 @@ const StyledWrapper = styled(FullWidthSection)`
 
 const StyledSearchPannelWrapper = styled.div`
     position: absolute;
-    left: 30%;
+    left: 25%;
     bottom: -10%;
 `
 
