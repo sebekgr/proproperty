@@ -2,13 +2,10 @@ import { FC, useState } from 'react'
 import styled from 'styled-components'
 import { AimOutlined, CalendarOutlined, SearchOutlined } from '@ant-design/icons'
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { colors, spacer, font } from '../../theme'
+import { colors, spacer, font, size } from '../../theme'
 import Headline from '../../shared/headline'
 import 'react-day-picker/lib/style.css';
 
-const Wrapper = styled.div`
-
-`
 type Props = {
     active: boolean
 }
@@ -37,16 +34,17 @@ const NavigationWrapper = styled.div`
     background-color: ${colors.white};
     box-shadow: 0px 10px 13px -7px ${colors.grey}, 5px 5px 15px 5px rgba(0,0,0,0);
     padding: ${spacer.s} ${spacer.xl};
-
 `
 
 const Section = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
 `
 
 const CalendarWrapper = styled.div`
     display: flex;
+    align-items: center;
 `
 
 const StyledHeadline = styled(Headline)`
@@ -54,7 +52,20 @@ const StyledHeadline = styled(Headline)`
     font-weight: bold;
 `
 
+const StyledInput = styled.input`
+    border:0;
+    padding: ${spacer.xs};
+    margin: ${spacer.xs};   
+`
 
+const StyledSearchButton = styled.button`
+    display:flex;
+    border-radius: ${spacer.xs};
+    padding: ${spacer.s};
+    color: ${colors.white};
+    background-color: ${colors.secondary};
+    font-size: ${size.l};
+`
 
 const SearchPanel: FC = () => {
     const [activeButton, setActiveButton] = useState<string>('Rent Home')
@@ -71,7 +82,7 @@ const SearchPanel: FC = () => {
         )
     })
     return (
-        <Wrapper>
+        <div>
             <ButtonWrapper>
                 {buttons}
             </ButtonWrapper>
@@ -80,7 +91,7 @@ const SearchPanel: FC = () => {
                     <StyledHeadline as="h4">Location</StyledHeadline>
                     <div>
                         <AimOutlined />
-                        <input placeholder="Enter your location..." />
+                        <StyledInput placeholder="Enter your location..." />
                     </div>
                 </Section>
                 <Section>
@@ -97,10 +108,10 @@ const SearchPanel: FC = () => {
                     </CalendarWrapper>
                 </Section>
                 <Section>
-                    <button><SearchOutlined /></button>
+                    <StyledSearchButton><SearchOutlined /></StyledSearchButton>
                 </Section>
             </NavigationWrapper>
-        </Wrapper>
+        </div>
     )
 }
 

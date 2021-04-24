@@ -25,4 +25,11 @@ export default createGlobalStyle`
     a {
         text-decoration: none;
     }
+
+    // calendar inputs
+    .DayPickerInput input {
+        padding: 1rem;
+        margin: 1rem;
+        border: 0;
+    }
 `
