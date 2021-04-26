@@ -76,6 +76,9 @@ const TextList: FC = () => {
         </StyledList>
     )
 }
+const Wrapper = styled(MaxWidthSection)`
+    margin-bottom: ${spacer.xl};
+`
 
 const Hero: FC = () => {
     return (
@@ -95,19 +98,19 @@ const Hero: FC = () => {
                 <SearchPanel />
             </StyledSearchPannelWrapper>
         </StyledWrapper>
-            <MaxWidthSection>
-                <StyledRow ds={3} de={9}>
-                    <StyledHeadline as="h4">We've reimagined the home rent<br /> renovation experiance.</StyledHeadline>
-                    <StyledMaxWidthSection>
-                        <Row ds={1} de={6}>
-                            <TextList />
-                        </Row>
-                        <Row ds={7} de={4}>
-                            <InfoBox />
-                        </Row>
-                    </StyledMaxWidthSection>
-                </StyledRow>
-            </MaxWidthSection>
+        <Wrapper>
+            <StyledRow ds={3} de={9}>
+                <StyledHeadline as="h4">We've reimagined the home rent<br /> renovation experiance.</StyledHeadline>
+                <StyledMaxWidthSection>
+                    <Row ds={1} de={6}>
+                        <TextList />
+                    </Row>
+                    <Row ds={7} de={4}>
+                        <InfoBox />
+                    </Row>
+                </StyledMaxWidthSection>
+            </StyledRow>
+        </Wrapper>
         </>
     )
 }
