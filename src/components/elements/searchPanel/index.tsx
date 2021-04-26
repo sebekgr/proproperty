@@ -1,10 +1,8 @@
 import { FC, useState } from 'react'
 import styled from 'styled-components'
-import { AimOutlined, CalendarOutlined, SearchOutlined } from '@ant-design/icons'
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { colors, spacer, font, size } from '../../theme'
-import Headline from '../../shared/headline'
-import 'react-day-picker/lib/style.css';
+import { colors, spacer  } from '../../theme'
+import Rent from './rent'
+import Sell from './sell'
 
 type Props = {
     active: boolean
@@ -36,40 +34,11 @@ const NavigationWrapper = styled.div`
     padding: ${spacer.s} ${spacer.xl};
 `
 
-const Section = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-`
 
-const CalendarWrapper = styled.div`
-    display: flex;
-    align-items: center;
-`
-
-const StyledHeadline = styled(Headline)`
-    font-family: ${font.fontFamily.bold};
-    font-weight: bold;
-`
-
-const StyledInput = styled.input`
-    border:0;
-    padding: ${spacer.xs};
-    margin: ${spacer.xs};   
-`
-
-const StyledSearchButton = styled.button`
-    display:flex;
-    border-radius: ${spacer.xs};
-    padding: ${spacer.s};
-    color: ${colors.white};
-    background-color: ${colors.secondary};
-    font-size: ${size.l};
-`
 
 const SearchPanel: FC = () => {
-    const [activeButton, setActiveButton] = useState<string>('Rent Home')
-    const buttons = ['Rent Home', 'Rent Workspace']
+    const [activeButton, setActiveButton] = useState<string>('Rent')
+    const buttons = ['Rent', 'Sell']
         .map(button => {
         return (
             <StyledButton 
@@ -87,29 +56,7 @@ const SearchPanel: FC = () => {
                 {buttons}
             </ButtonWrapper>
             <NavigationWrapper>
-                <Section>
-                    <StyledHeadline as="h4">Location</StyledHeadline>
-                    <div>
-                        <AimOutlined />
-                        <StyledInput placeholder="Enter your location..." />
-                    </div>
-                </Section>
-                <Section>
-                    <StyledHeadline as="h4">Check in - Check out</StyledHeadline>
-                    <CalendarWrapper>
-                        <CalendarWrapper>
-                            <CalendarOutlined />
-                            <DayPickerInput placeholder="Set date"/>
-                        </CalendarWrapper>
-                        <CalendarWrapper>
-                            <CalendarOutlined />
-                            <DayPickerInput placeholder="Set date"/>
-                        </CalendarWrapper>
-                    </CalendarWrapper>
-                </Section>
-                <Section>
-                    <StyledSearchButton><SearchOutlined /></StyledSearchButton>
-                </Section>
+                {activeButton === 'Rent' ? <Rent /> : <Sell />}
             </NavigationWrapper>
         </div>
     )

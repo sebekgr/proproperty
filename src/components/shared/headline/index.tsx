@@ -10,6 +10,7 @@ const StyledHeadLine: FC<HeadlineProps> = styled.h1<HeadlineProps>`
 	${({ as }) => `
         font-family: ${font.fontFamily.default};
         font-size: ${headlineSize[as as HeadlineType]}
+		font-weight: bold;
     `}
 `
 
