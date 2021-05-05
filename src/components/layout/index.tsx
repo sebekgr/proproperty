@@ -18,7 +18,7 @@ export type RowProps = {
 export const Grid = styled.div`
 	// default
 	display: grid;
-	grid-template-columns: 1fr repeat(12, 8rem) 1fr;
+	grid-template-columns: 1fr repeat(10, 8rem) 1fr;
 	grid-template-rows: max-content;
 	grid-auto-columns: auto;
 	grid-auto-rows: auto;
@@ -34,13 +34,13 @@ export const Grid = styled.div`
 
 export const MaxWidthSection = styled.section`
 	// default
-	grid-column: 2 / span 12;
+	grid-column: 2 / span 10;
 	display: grid;
-	grid-template-columns: repeat(12, 8rem);
+	grid-template-columns: repeat(10, 8rem);
 	grid-template-rows: max-content;
 	grid-auto-rows: auto;
 	gap: 2rem;
-
+	// TODO adjust for mobile
 	@media ${breakpoint.m} {
 		grid-column: 2 / span 6;
 		grid-template-columns: repeat(6, 8rem);
@@ -55,11 +55,11 @@ export const MaxWidthSection = styled.section`
 export const FullWidthSection = styled.section`
 	// default
 	display: grid;
-	grid-column: 1 / span 14;
-	grid-template-columns: 1fr repeat(12, 8rem) 1fr;
+	grid-column: 1 / span 12;
+	grid-template-columns: 1fr repeat(10, 8rem) 1fr;
 	grid-template-rows: max-content;
 	gap: 2rem;
-
+	// TODO adjust for mobile
 	@media ${breakpoint.m} {
 		grid-column: 1 / span 8;
 		grid-template-columns: 2rem repeat(6, 8rem) 2rem;
@@ -74,9 +74,11 @@ export const FullWidthSection = styled.section`
 
 export const Row = styled.div<RowProps>`
 	// default
+	display: grid;
+	align-content: center;
 	grid-column-start: ${(props) => (props.ds ? props.ds : 1)};
 	grid-column-end: span ${(props) => (props.de ? props.de : 12)};
-
+	// TODO adjust for mobile
 	@media ${breakpoint.m} {
 		grid-column-start: ${({ ms }) => (ms ? ms : 1)};
 		grid-column-end: span ${({ me }) => (me ? me : 6)};
