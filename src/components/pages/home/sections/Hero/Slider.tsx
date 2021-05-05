@@ -1,17 +1,16 @@
 import { FC, useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { Row } from '../../../../layout'
 import img2 from './img/2.webp'
 import img3 from './img/3.webp'
 
-const Wrapper = styled.div`
+const Wrapper = styled(Row)`
     position: relative;
-    height: 100%;
+    height: 40rem;
 `
 
 const StyledImg = styled.img`
     position: absolute;
-    top:0;
-    left:0;
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -34,7 +33,7 @@ const Slider: FC = () => {
         };
       }, []);
     return (
-        <Wrapper>
+        <Wrapper ds={1} de={6}>
             <StyledImg src={images[index]} />
         </Wrapper>
     )

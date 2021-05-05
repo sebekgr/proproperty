@@ -11,15 +11,11 @@ import Headline from '../../../../shared/headline'
 const StyledHeadLine = styled.h1`
     font-family: ${font.fontFamily.bold};
     font-size: 6rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
 `
 
 const StyledWrapper = styled(FullWidthSection)`
     position: relative;
-    background: linear-gradient(90deg, ${colors.primaryLight} 50%, ${colors.white} 50%);
-    gap: 0;
-    margin-bottom: ${spacer.xl};
+    background-color: ${colors.primaryLight};
 `
 
 const StyledSearchPannelWrapper = styled.div`
@@ -55,6 +51,15 @@ const StyledList = styled.ul`
         }
     }
 `
+const Wrapper = styled(MaxWidthSection)`
+    margin-bottom: ${spacer.xl};
+`
+
+const StyledSliderRow = styled(Row)`
+    background-color: ${colors.white};
+    grid-template-columns: repeat(7, 8rem) 1fr;
+    gap: 2rem;
+`
 
 const texts = [
     'We Handle Everything',
@@ -76,24 +81,22 @@ const TextList: FC = () => {
         </StyledList>
     )
 }
-const Wrapper = styled(MaxWidthSection)`
-    margin-bottom: ${spacer.xl};
-`
+
 
 const Hero: FC = () => {
     return (
         <>
         <StyledWrapper>
-            <Row ds={4} de={4}>
+            <Row ds={2} de={4}>
                 <StyledHeadLine as="h1">
                     Home rent<br />
                     renovations,<br />
                     made easy!
                 </StyledHeadLine>
             </Row>
-            <Row ds={8} de={5}>
+            <StyledSliderRow ds={6} de={7} >
                 <Slider />
-            </Row>
+            </StyledSliderRow>
             <StyledSearchPannelWrapper>
                 <SearchPanel />
             </StyledSearchPannelWrapper>
